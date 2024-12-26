@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>PRIMS</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,7 +19,49 @@
             </style>
         @endif
     </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+
+    <body>
+        <header class="bg-white shadow" style="height: 64px">
+            <div class="container mx-auto flex justify-around items-center p-4">
+
+                <!-- navbar menu -->
+                <button class=" text-gray-700" id="menu-toggle">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                </button>
+
+                <!-- logo -->
+                <div class="flex items-center space-x-2">
+                    <img src="img/logo.svg" alt="Clinic Logo" class="w-9 h-9">
+                </div>
+
+                <!-- log in -->
+                @if (Route::has('login'))
+                    <nav class="-mx-3 flex flex-1 justify-end">
+                        @auth
+                            <a
+                                href="{{ url('/dashboard') }}"
+                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-black dark:hover:text-black/80 dark:focus-visible:ring-white"
+                            >
+                                Dashboard
+                            </a>
+                        @else
+                            <a
+                                href="{{ route('login') }}"
+                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-black dark:hover:text-black/80 dark:focus-visible:ring-white"
+                            >
+                                Log in
+                            </a>
+                        @endauth
+                    </nav>
+                @endif
+
+            </div>
+        </header>
+    </body>
+
+    <!-- <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
             <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
             <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
@@ -172,5 +214,5 @@
                 </div>
             </div>
         </div>
-    </body>
+    </body> -->
 </html>
