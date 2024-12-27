@@ -15,7 +15,22 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                nunito: ['Nunito', 'sans-serif'],
             },
+            colors: {
+                'prims-yellow': '#F4BF4F',
+                'prims-azure': {
+                    100: '#A1C2D9',  // Lighter shade
+                    200: '#6F9FBB',  // Lighter
+                    300: '#4A8AA3',  // Medium light
+                    400: '#2C7491',  // Base color
+                    500: '#183A66',  // Base color (your original)
+                    600: '#132C53',  // Darker shade
+                    700: '#0E1F40',  // Darker
+                    800: '#091535',  // Even darker
+                    900: '#050F2A',  // Darkest
+                },
+            }
         },
     },
 
