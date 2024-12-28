@@ -18,7 +18,12 @@ export default {
                 nunito: ['Nunito', 'sans-serif'],
             },
             colors: {
-                'prims-yellow': '#F4BF4F',
+                'prims-yellow': {
+                    1: '#F4BF4F',
+                    2: '#ECBA51',
+                    3: '#E7B54D',
+                    4: '#E1AD40',
+                },
                 'prims-azure': {
                     100: '#A1C2D9',  // Lighter shade
                     200: '#6F9FBB',  // Lighter
